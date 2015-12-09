@@ -1,22 +1,30 @@
 #include <stdio.h>
-#include <string.h>
+void getsmall(int* numA, int* numS, int n);
 int main()
 {
-   char *arr[5];
-   char str[5][80];
-   char max[80];
+   int numA[6];
+   int numS[6];
    int i;
-   for(i=0; i<5; i++)
-   {
-      gets(str[i]);
-      arr[i] = str[i];
-   }
-   strcpy(max, arr[0]);
-   for(i=0; i<5; i++)
-   {
-      if(strlen(max) < strlen(arr[i]))
-         strcpy(max,arr[i]);
-   }
-   puts(max);
+   for(i=0; i<6; i++)
+      scanf("%d",&numA[i]);
+   getsmall(numA, numS, 6);
+   
+   for(i=0; i<6; i++)
+      printf("%d ",numS[i]);
    return 0;
+}
+void getsmall(int* numA, int* numS, int n)
+{
+   int count=0;
+   int i,j;
+   for(i=0; i<n; i++)
+   {
+      for(j=0; j<n; j++)
+      {
+         if(numA[i] > numA[j])
+            count++;
+      }
+      numS[i] = count;
+      count = 0;
+   }
 }

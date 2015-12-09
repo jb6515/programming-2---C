@@ -33,6 +33,6 @@ int main(void)
 		}
 	}
 
-	printf("°¡Àå °¡±î¿î ÁÂÇ¥´Â (%d,%d)", p[max], p[max]);
-	printf("°Å¸®´Â %d", distance);
+	printf("ê°€ìž¥ ê°€ê¹Œìš´ ì¢Œí‘œëŠ” (%d,%d)", p[max], p[max]);
+	printf("ê±°ë¦¬ëŠ” %d", distance);
 }
